@@ -43,7 +43,6 @@ class GetVideoList(Step):
 
         # 寫入影片清單
         self.write_to_file(video_links, utils.get_video_list_filepath(channel_id))
-
         return video_links
 
     def write_to_file(self, video_links, filepath):

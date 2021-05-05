@@ -23,18 +23,14 @@ class Utils:
         path = self.get_video_list_filepath(channel_id)
         return os.path.exists(path) and os.path.getsize(path) > 0
 
-    # 擷取影片id
-    @staticmethod
-    def get_video_id_from_url(url):
-        return url.split('watch?v=')[-1]
-
-    # 路徑組合
-    def get_caption_filepath(self, url):
-        return os.path.join(CAPTIONS_DIR, self.get_video_id_from_url(url) + '.txt')
-
-    # 檢查url資料是否存在
-    def caption_file_exist(self, url):
-        path = self.get_caption_filepath(url)
+    # 檢查字幕 資料是否存在
+    def caption_file_exist(self, yt):
         # 檔案目錄是否存在 os.path.exists
-        return os.path.exists(path) and os.path.getsize(path) > 0
+        filepath = yt.caption_filepath
+        return os.path.exists(filepath) and os.path.getsize(filepath) > 0
 
+    # 檢查影片 是否存在
+    def video_file_exist(self, yt):
+        # 檔案目錄是否存在 os.path.exists
+        filepath = yt.video_filepath
+        return os.path.exists(filepath) and os.path.getsize(filepath) > 0
