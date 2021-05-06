@@ -10,3 +10,4 @@ VIDEOS_DIR = os.path.join(DOWNLOADS_DIR, 'videos')
 # directory
 CAPTIONS_DIR = os.path.join(DOWNLOADS_DIR, 'captions')
 
+OUTPUT_DIR = 'outputs'
