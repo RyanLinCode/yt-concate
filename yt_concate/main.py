@@ -12,25 +12,26 @@ from yt_concate.pipeline.pipeline import Pipeline
 from yt_concate.utils import Utils
 
 # 全部大寫示意內容不變
-CHANNEL_ID = 'UCKSVUHI9rbbkXhvAXK-2uxA'
-
+CHANNEL_ID = 'UCk55DOnuAgOiFnBj-0XXwGQ'
+# UCLQJGvzJiYGhGAGvwodRL4A
+# UCKSVUHI9rbbkXhvAXK-2uxA
 
 def main():
     inputs = {
         'channel_id': CHANNEL_ID,
-        'search_word': 'incredible',
+        'search_word': 'impossible',
         'limit': 20,
     }
-
+    # incredible
     steps = [
         Preflight(),
         GetVideoList(),
         InitializeYT(),
         DownloadCaptions(),
-        ReadCaption(),
-        Search(),
-        DownloadVideos(),
-        EditVideo(),
+        # ReadCaption(),
+        # Search(),
+        # DownloadVideos(),
+        # EditVideo(),
         Postflight(),
     ]
 

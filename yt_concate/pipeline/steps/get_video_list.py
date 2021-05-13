@@ -39,7 +39,7 @@ class GetVideoList(Step):
             # 不建議抓取所有錯誤
             except KeyError:
                 break
-        print(video_links)
+        print(len(video_links))
 
         # 寫入影片清單
         self.write_to_file(video_links, utils.get_video_list_filepath(channel_id))
